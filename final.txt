@@ -1,0 +1,30 @@
+﻿Poker Pre-flop Bot
+Ethan Choularton CSCI200 section D
+PROBLEM DESCRIPTION:
+I will be making a poker bot, which will help people choose whether or not to play poker hands. It will also tell players how much to bet. It will take in inputs at the beginning of the program like how many players there are, how much money the player has, Then while you play, you will input the cards you get dealt, and it will tell you how much you can play for, for example if you get two aces you it will tell you that you can call or raise up to 100% of you stack. 
+
+
+PROGRAM DOCUMENTATION:
+To use my bot, you run the code, it will first ask you to input your hand, then how many players are at the table, and finally, how many chips you have. It will then output two things, the first is the percent chance you have of winning based on your hand, for example, if you get Ace King suited and there are 4 players, you have a 40.5% chance of winning, it then tells you how many chips you could call or raise, the idea is that it tell you the max so you know how much you could call or bet. This allows players to add some randomness while still knowing their limits. 
+If I had more time, I would make it extend to the flop, this would be much more difficult because the bot would have to calculate what hand and possible hands you have. 
+CLASS DESCRIPTION:
+
+
+Hand class 
+	* First_card string 
+* Second_card string
+* Player_count int 
+	* Calculate_hand value(): int 
+* Calculte_bet_size(int hand_value): int  
+* Std::string _hand
+	
+
+        The class that I made was the hand class, which handles all the logic for the bot. It has 3 privates First_card Second_card, and Player_count. It also has 2 main functions, one for calculating your hand value. This function reads from a CSV file and returns a string with the percent chance of winning that the player has based on the two cards in the player's hand.  The second function calculates how much you should bet, it uses the hand_value() to determine how much a player can call or raise.  
+LIST DATA STRUCTURE:
+        I used the array list structure from class to store all the hands that the player has played, I did this so that at the end of the session, the player can see what hands they were dealt. At the end of my program, I thank and print out all the hands that the player saw that night. 
+FILE I/O: 
+        File I/O was a big part of my project. I read from a file to figure out what the hand equity was. I have a CSV file called hand_chart with all possible hands and their percentage chance of winning. A big part of my program is telling the player this information. 
+PROJECT MODIFICATIONS:
+        I did not change a lot with this project. There was one major change, however, I made the bot tell you how much you can bet or raise. I originally wanted the bot to tell the player how much to bet, but with my final I decide that It would be better for the bot to tell the user the maximum amount  they should bet or call, this allows for the user to add some randomness to the table, if the bot used the same formulas to calculator bet sizing then the player would be super easy to read. 
+REFLECTIONS:
+This project taught me a lot, It taught me a lot about poker and how math can be used to play better poker. This project also made me better at file input and output, which was something that I struggled with earlier in the course.
